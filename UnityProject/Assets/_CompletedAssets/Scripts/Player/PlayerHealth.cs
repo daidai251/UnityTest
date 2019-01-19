@@ -7,6 +7,7 @@ namespace CompleteProject
 {
     public class PlayerHealth : MonoBehaviour
     {
+        [ContextMenuItem("AddHp", "Addhp")]
         public int startingHealth = 100;                            // The amount of health the player starts the game with.
         public int currentHealth;                                   // The current health the player has.
         public Slider healthSlider;                                 // Reference to the UI's health bar.
@@ -23,6 +24,11 @@ namespace CompleteProject
         bool isDead;                                                // Whether the player is dead.
         bool damaged;                                               // True when the player gets damaged.
 
+        
+        void Addhp() {
+            startingHealth += 20;
+
+        }
 
         void Awake ()
         {
@@ -106,5 +112,11 @@ namespace CompleteProject
             // Reload the level that is currently loaded.
             SceneManager.LoadScene (0);
         }
+
+        [ContextMenu("ChangColor")]
+        void ChangeColor() {
+            flashColour = Color.green;
+        }
+
     }
 }

@@ -45,4 +45,13 @@ public class Tools {
     }
 
 
-}
+    //%=ctrl  #=shift &=Alt
+    [MenuItem("Tools/test2 %a", false, 2)]
+    static void Test4()
+    {
+        Debug.Log("Test");
+    }
+
+
+
+    }
